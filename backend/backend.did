@@ -1,0 +1,12 @@
+type Time = int;
+type Contact = 
+ record {
+   email: text;
+   message: text;
+   name: text;
+   timestamp: Time;
+ };
+service : {
+  getContacts: () -> (vec Contact) query;
+  submitContact: (text, text, text) -> (bool);
+}
